@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --rdp-accent-color: rgb(251, 191, 36);
+  --rdp-today-color: rgb(251, 191, 36) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --rdp-accent-color: rgb(251, 191, 36);
+    --rdp-today-color: rgb(251, 191, 36) !important;
+  }
+}
+
+body {
+  color: #ededed;
+  /* background: #0a0a0a; */
+  background: #110d1a;
+  /* color: var(--foreground);
+  background: var(--background); */
+
+  /* background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%); */
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+* {
+  touch-action: manipulation;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
+.rdp-root {
+  --rdp-accent-color: rgb(
+    251,
+    191,
+    36
+  ) !important; /* The accent color used for selected days and UI elements. */
+}
+
+#privy-dialog > div {
+  position: sticky !important;
+}
+
+/* #privy-modal-content {
+  border-radius: 24px;
+} */
